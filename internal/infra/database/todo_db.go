@@ -7,5 +7,5 @@ type Todo struct {
 }
 
 func NewTodo(db *sql.DB) *Todo {
-
+	return &Todo{db: db}
 }

@@ -1,0 +1,11 @@
+make createmigration
+docker exec -it postgres psql -U postgres
+create database todo;
+create user user_todo;
+alter user user_todo with encrypted password 'pass';
+grant all privileges on database todo to user_todo;
+\l
+\c todo;
+\dt
+create table todos (id serial primary key, name varchar, description text, done bool);
+
