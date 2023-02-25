@@ -1,8 +1,11 @@
 package entity
 
+import "time"
+
 type Todo struct {
-	ID          int64  `json:"ID"`
-	Title       string `json:"title"`
-	Description string `json:"description"`
-	Done        bool   `json:"done"`
+	ID          int32     `json:"ID"`
+	Name        string    `json:"name"`
+	Description string    `json:"description"`
+	Done        bool      `json:"done"`
+	CreatedAt   time.Time `json:"created_at"`
 }
