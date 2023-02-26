@@ -1,7 +1,7 @@
 version: "1"
 packages:
-  - name: "todos"
-    path: "./sql/sqlc"
+  - name: "db"
+    path: "./internal/db"
     queries: "./sql/query"
     schema: "./sql/migrations"
     engine: "postgresql"
